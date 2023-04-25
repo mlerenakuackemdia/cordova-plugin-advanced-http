@@ -179,7 +179,7 @@ function sendRequest(method, withData, opts, success, failure) {
 
   var processedData = null;
   var xhr = new XMLHttpRequest();
-
+  xhr.withCredentials = true;
   reqMap[reqId] = xhr;
 
   xhr.open(method, url);
